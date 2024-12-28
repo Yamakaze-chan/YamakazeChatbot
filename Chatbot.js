@@ -26,11 +26,11 @@ class Chatbot {
                     }
                     if (response !== undefined || action !== undefined) {
                         if (action) {
-                            if(typeof action === 'function') {
+                            if(typeof action === 'string') {
                                 a = action;
                             }
                             else {
-                                throw new Error('Your input <action> is not function type, Please check again');
+                                throw new Error('Your input <action> is not string type, Please check again');
                             }
                         }
                         if (typeof response === 'string' || typeof response === 'object') {
@@ -76,11 +76,11 @@ class Chatbot {
                     }
                     if (response !== undefined || action !== undefined) {
                         if (action) {
-                            if(typeof action === 'function') {
+                            if(typeof action === 'string') {
                                 a = action;
                             }
                             else {
-                                throw new Error('Your input <action> is not function type, Please check again');
+                                throw new Error('Your input <action> is not string type, Please check again');
                             }
                         }
                         if (typeof response === 'string' || typeof response === 'object') {
@@ -136,10 +136,10 @@ class Chatbot {
 
     setAction(tag, action) {
         if(tag !== '' && Object.keys(this.data).includes(tag)) {
-            if (typeof action === 'function') {
+            if (typeof action === 'string') {
                 this.data[tag].act = action;
             } else {
-                throw new Error('Your input <action> is not function type, Please check again');
+                throw new Error('Your input <action> is not string type, Please check again');
             }
         } else {
             throw new Error('Your <tag> is not defined');
