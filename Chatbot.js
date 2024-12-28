@@ -262,7 +262,7 @@ class Chatbot {
         var list_answer = [];
         // console.log(Object.keys(data))
         for(let i of Object.keys(this.data)){
-            for(var j = 0; j < data[i].pat.length; j++)
+            for(var j = 0; j < this.data[i].pat.length; j++)
             {
                 //console.log(data[i].patterns[j]);
                 var simi_point = similarity(user_str, this.data[i].pat[j]);
