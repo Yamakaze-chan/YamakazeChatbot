@@ -274,7 +274,7 @@ class Chatbot {
                 }
             }
         }
-        if(this.getAction(tag)) return [tag, this.getAction(tag), list_answer[Math.floor(Math.random()*list_answer.length)]]
+        if(this.getAction(tag)) return [tag, list_answer[Math.floor(Math.random()*list_answer.length)], this.getAction(tag)]
         // console.log(tag, list_answer[Math.floor(Math.random()*list_answer.length)])
         return [tag, list_answer[Math.floor(Math.random()*list_answer.length)]]
     }
