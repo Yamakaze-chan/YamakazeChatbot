@@ -216,7 +216,7 @@ class Chatbot {
         }
     }
       
-    getBotAnswer(user_str, data)
+    getBotAnswer(user_str)
     {
         function similarity(s1, s2) {
             var longer = s1;
@@ -260,21 +260,21 @@ class Chatbot {
         var tag = "";
         var max_simi_point = 0;
         var list_answer = [];
-        console.log(Object.keys(data))
-        for(let i of Object.keys(data)){
+        // console.log(Object.keys(data))
+        for(let i of Object.keys(this.data)){
             for(var j = 0; j < data[i].pat.length; j++)
             {
                 //console.log(data[i].patterns[j]);
-                var simi_point = similarity(user_str, data[i].pat[j]);
+                var simi_point = similarity(user_str, this.data[i].pat[j]);
                 if(max_simi_point < simi_point)
                 {
                     max_simi_point = simi_point;
                     tag = i;
-                    list_answer = data[i].res;
+                    list_answer = this.data[i].res;
                 }
             }
         }
-        console.log(tag, list_answer[Math.floor(Math.random()*list_answer.length)])
+        // console.log(tag, list_answer[Math.floor(Math.random()*list_answer.length)])
         return [tag, list_answer[Math.floor(Math.random()*list_answer.length)]]
     }
 }
