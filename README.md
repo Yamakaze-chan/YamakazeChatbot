@@ -2,7 +2,12 @@
 # Introduction
 This is a simple template to create your own chatbot without training or do anything too complicated. Add chatbot to your portfolio and impress interviewer:>
 # Installation
-You can copy file `Chatbot.js` and paste it in your project folder
+You can copy file `Chatbot.js` and paste it into your project folder   
+OR   
+You can add this inside your `<head>` tag
+```html
+<script src="https://cdn.jsdelivr.net/gh/Yamakaze-chan/YamakazeChatbot/Chatbot.js"></script>
+```
 # Examples
 You can use this chatbot with these lines of code
 ```js
